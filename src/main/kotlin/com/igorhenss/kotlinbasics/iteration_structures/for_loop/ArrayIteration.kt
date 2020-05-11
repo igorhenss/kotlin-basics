@@ -5,25 +5,31 @@ class ArrayIteration {
     // Can iterate through List<E> and Collection<E> as well
     // When using Collection<E>, array[index] won't work
 
-    fun <E: Any> arrayIteration(array: Array<E>) {
-        println("Iterating through array: [$array]")
+    fun arrayIteration(array: Array<Any>) {
+        println("Iterating through array:")
         for(element in array) {
             print("[$element] ")
         }
+        println()
+        println()
     }
 
-    fun <E: Any> arrayIterationWithIndex(array: Array<E>) {
-        println("Iterating through array with array.withIndex: [$array]")
+    fun arrayIterationWithIndex(array: Array<Any>) {
+        println("Iterating through array with array.withIndex:")
         for((index, element) in array.withIndex()) {
-            print("[$index, $element] ")
+            print("($index, $element) ")
         }
+        println()
+        println()
     }
 
-    fun <E: Any> arrayIterationWithIndices(array: Array<E>) {
-        println("Iterating through array with array.indices: [$array]")
+    fun arrayIterationWithIndices(array: Array<Any>) {
+        println("Iterating through array with array.indices:")
         for(index in array.indices) {
-            print("[${array[index]}]")
+            print("($index, ${array[index]}) ")
         }
+        println()
+        println()
     }
 
 }

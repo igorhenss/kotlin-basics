@@ -4,21 +4,23 @@ class WhileIteration {
 
     fun reduceToZeroUsingWhile(n: Int) {
         var x = n
-        println("Iterating from $n to 0 using while")
+        println("Iterating from $n to 0 using while:")
         while(x > 0) {
-            print("[${x}] ")
-            x--
+            print("[${x--}] ")
         }
+
+        if (n > 0) println(".")
         println()
     }
 
     fun reduceToZeroUsingDoWhile(n: Int) {
         var x = n
-        println("Iterating from $n to 0 using do...while")
+        println("Iterating from $n to 0 using do...while:")
         do {
-            print("[${x}] ")
-            x--
+            print("[${x--}] ")
         } while(x > 0)
+
+        println(".")
         println()
     }
 
